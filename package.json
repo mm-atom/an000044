@@ -39,10 +39,21 @@
 		}
 	],
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"@mmstudio/an000008": "^1.0.202004170754",
+		"@mmstudio/an000040": "^1.0.1",
+		"@mmstudio/an000041": "^1.1.1",
+		"@mmstudio/an000043": "^1.0.2",
+		"ffprobe": "^1.1.2",
+		"ffprobe-static": "^3.0.0"
+	},
 	"devDependencies": {
+		"@mmstudio/config": "^2.0.1",
+		"@types/ffprobe": "^1.1.0",
+		"@types/ffprobe-static": "^2.0.0",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
+		"anylogger": "^1.0.9",
 		"ava": "latest",
 		"del-cli": "latest",
 		"eslint": "latest",
