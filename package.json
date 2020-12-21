@@ -43,7 +43,7 @@
 		"@mmstudio/an000008": "^1.0.202004170754",
 		"@mmstudio/an000040": "^1.0.1",
 		"@mmstudio/an000041": "^1.1.1",
-		"@mmstudio/an000043": "^1.0.2",
+		"@mmstudio/an000043": "^1.1.0",
 		"ffprobe": "^1.1.2",
 		"ffprobe-static": "^3.0.0"
 	},
