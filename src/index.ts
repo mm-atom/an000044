@@ -38,8 +38,8 @@ export default async function upload(req: IncomingMessage, screenshottime: numbe
 		};
 		logger.debug('codec', video.codec_name);
 		if (video.codec_name === 'h264') {
-			if (file.type !== type) {
-				file.type = type;
+			if (vfile.type !== type) {
+				vfile.type = type;
 			}
 			const ret = (await up([vfile]))[0];
 			ret.meta.screenshot = uploaded_image.id;
