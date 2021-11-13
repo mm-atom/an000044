@@ -1,22 +1,22 @@
 {
-	"env": {
-		"es6": true,
-		"node": true
-	},
+	"parser": "@typescript-eslint/parser",
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
+		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:import/errors",
 		"plugin:import/warnings",
 		"plugin:import/typescript",
-		"prettier",
-		"prettier/@typescript-eslint"
+		"prettier"
 	],
-	"parser": "@typescript-eslint/parser",
+	"env": {
+		"es6": true,
+		"jest": true,
+		"node": true
+	},
 	"parserOptions": {
-		"ecmaVersion": 2018,
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"impliedStrict": true
@@ -28,7 +28,10 @@
 		"@typescript-eslint"
 	],
 	"rules": {
-		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"no-empty-pattern": "warn",
+		"@typescript-eslint/indent": 0,
+		"@typescript-eslint/member-delimiter-style": 0,
+		"@typescript-eslint/no-var-requires": 0,
 		"arrow-parens": [
 			"off"
 		],
@@ -188,6 +191,7 @@
 		"@typescript-eslint/consistent-type-assertions": "off",
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/explicit-member-accessibility": "error",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/interface-name-prefix": "off",
 		"@typescript-eslint/no-empty-function": [
 			"warn",
@@ -215,12 +219,8 @@
 		"@typescript-eslint/no-namespace": "off",
 		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/no-parameter-properties": "off",
-		"@typescript-eslint/no-unused-vars": [
-			"warn",
-			{
-				"args": "none"
-			}
-		],
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
 		"@typescript-eslint/no-use-before-define": "off",
 		"@typescript-eslint/unbound-method": "off" // Too many bugs right now: https://github.com/typescript-eslint/typescript-eslint/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+unbound-method
 	}

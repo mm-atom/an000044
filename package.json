@@ -8,7 +8,8 @@
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
-		"build": "npm run clean && npm run lint && npm run compile"
+		"build": "npm run clean && npm run lint && npm run compile",
+		"release": "yarn build && np"
 	},
 	"repository": {
 		"type": "https+git",
@@ -39,11 +40,15 @@
 		}
 	],
 	"license": "MIT",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	},
 	"dependencies": {
 		"@mmstudio/an000008": "^1.0.202004170754",
 		"@mmstudio/an000040": "^1.0.1",
-		"@mmstudio/an000041": "^1.1.2",
-		"@mmstudio/an000043": "^1.1.1",
+		"@mmstudio/an000041": "^2.0.0",
+		"@mmstudio/an000043": "^2.0.1",
 		"ffprobe": "^1.1.2",
 		"ffprobe-static": "^3.0.0"
 	},
@@ -59,6 +64,7 @@
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
+		"np": "latest",
 		"typescript": "next"
 	}
 }

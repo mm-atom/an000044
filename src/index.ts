@@ -28,7 +28,8 @@ export default async function upload(req: IncomingMessage, screenshottime: numbe
 			name: `${filename}.jpg`,
 			path: tempimg,
 			type: 'image/jpeg',
-			meta: {}
+			meta: {},
+			fields: {}
 		}]);
 		const [video, audio] = await get_stream_info(file.path);
 		// !!! 如果上传的格式不是mp4格式，这里返回的值是原文件的多媒体信息
@@ -60,7 +61,8 @@ export default async function upload(req: IncomingMessage, screenshottime: numbe
 				id,
 				name,
 				path: mp4_path,
-				type
+				type,
+				fields: {}
 			}]);
 			logger.info(`File is converted: id=${id}, name=${file.name}`);
 		})(file);
